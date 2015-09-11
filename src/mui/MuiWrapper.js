@@ -25,15 +25,17 @@ class MuiWrapper extends Component {
 			);
 		});
 
+				// <ProjectUpdate />
+				// <ProjectMain />
+				// <ProjectPeople />
+				// <ProjectList />
+				// {projectCardNodes}
+				
 		return (
 			<div>
 				<Style rules={{ html: {	position: 'relative', minHeight: '100%' }, body: {marginBottom: 100} }} />
 				<GwAppBar />
-				{/*<ProjectUpdate />*/}
-				{/*<ProjectMain />*/}
-				{/*<ProjectPeople />*/}
-				<ProjectList />
-				{projectCardNodes}
+
 				
 			</div>
 		);
