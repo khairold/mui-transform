@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import mui, { AppBar, Paper } from 'material-ui';
 import Radium, { Style } from 'radium';
 
+import LoginBox from './LoginBox';
 import GwAppBar from './GwAppBar';
 import ProjectCard from './ProjectCard';
 import ProjectUpdate from './ProjectUpdate';
@@ -25,6 +26,8 @@ class MuiWrapper extends Component {
 			);
 		});
 
+				// <GwAppBar />
+				// <LoginBox />
 				// <ProjectUpdate />
 				// <ProjectMain />
 				// <ProjectPeople />
@@ -32,11 +35,12 @@ class MuiWrapper extends Component {
 				// {projectCardNodes}
 				
 		return (
-			<div>
-				<Style rules={{ html: {	position: 'relative', minHeight: '100%' }, body: {marginBottom: 100} }} />
-				<GwAppBar />
-
+			<div style={{minHeight: 100}}>
+				<Style rules={{ html: {	position: 'relative', minHeight: '100%' }}} />
 				
+				<GwAppBar />
+				
+				<ProjectList />
 			</div>
 		);
 	}

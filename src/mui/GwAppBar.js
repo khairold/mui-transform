@@ -15,7 +15,7 @@ var styles = {
     fontFamily: 'medium-content-sans-serif-font', 
     width: '100%',
     height: 65,
-    borderBottom: '1px solid #cccccc',
+    borderBottom: '1px solid #f3f3f3',
     display: '-webkit-flex',
     display: 'flex',
     '-webkit-align-items': 'center',
@@ -27,7 +27,7 @@ var styles = {
     fontSize: 30,
     fontWeight: 'bold',
     color: '#333333',
-    marginLeft: 20
+    paddingLeft: 14
   }
 }
 

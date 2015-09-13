@@ -17,7 +17,9 @@ class ProjectBookmark extends Component {
     console.log(mergedStyles); 
 //<FontIcon className="material-icons" style={mergedStyles} >{bookmark}</FontIcon>
     return (
-      <IconButton color={'#cccccc'} style={mergedStyles} iconClassName="material-icons">{bookmark}</IconButton>
+      <IconButton tooltip="Sort" disabled={false}>
+      <FontIcon color={'#cccccc'} style={mergedStyles} className="material-icons">{bookmark}</FontIcon>
+      </IconButton>
     );
   }
 }
@@ -25,7 +27,11 @@ class ProjectBookmark extends Component {
 var styles = {
   base: {
     // fontSize: 22
-    color: '#8f8f8f'
+    color: '#8f8f8f',
+    // display: 'inline-block',
+    // position: 'relative',
+    // right: 4,
+    // top: 0,
   }
 }
 

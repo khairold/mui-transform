@@ -14,18 +14,11 @@ class ProjectList extends Component {
   	const { image, name, role } = this.props;
     return (
       <div style={styles.container} >
-        <ProjectBookmark bookMarked = {false} />
+<IconButton tootltip="bookmark"  disabled={false} ><FontIcon color={'#cccccc'} className="material-icons">bookmark</FontIcon></IconButton>
 
-        <IconButton iconClassName="material-icons">bookmark</IconButton>
+          <List style={styles.list} subheader="On Going">
 
-          <List style={styles.list} subheader="Today">
-            <ListItem
-              innerStyle={styles.list} 
-              innerDivStyle={styles.list} 
-              leftAvatar={<Avatar src="images/ok-128.jpg" />}
-              primaryText={<ProjectTitle size={'list'}>Lala</ProjectTitle>} 
-               />
-            <ListDivider inset={true} />
+            <ListDivider inset={false} />
             <ListItem
               leftAvatar={<ProjectRagStatus rag={'green'} size={'lislt'} />}
               primaryText={<ProjectTitle size={'list'}>Pangkor</ProjectTitle>} 
@@ -34,10 +27,29 @@ class ProjectList extends Component {
                   Wish I could come, but I&apos;m out of town this weekend. There's so much more to tell you but I just don't have the time
                 </GreyedText>
               } 
+              rightIcon={<ProjectBookmark bookMarked = {false} />}
+              secondaryTextLines={2}  disabled={false} />
+
+              
+             
+          <ListDivider inset={false} />
+
+            <ListItem
+              leftAvatar={<ProjectRagStatus rag={'amber'} size={'lislt'} />}
+              primaryText={<ProjectTitle size={'list'}>Pangkor</ProjectTitle>} 
+              secondaryText={
+                <GreyedText size={'list'}>
+                  Wish I could come, but I&apos;m out of town this weekend. There's so much more to tell you but I just don't have the time
+                  <br /> ...read more
+                </GreyedText>
+              } 
               secondaryTextLines={2} 
-              rightIconButton={<ProjectBookmark bookMarked = {true} />} />
-              haha
+              rightIconButton={<IconButton tootltip="bookmark this"  disabled={false} ><FontIcon color={'#cccccc'} className="material-icons">bookmark</FontIcon></IconButton>}
+
+              />
+              
           </List>
+          
         
       </div>
     );
