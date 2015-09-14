@@ -16,13 +16,17 @@ class ProjectBookmark extends Component {
     let mergedStyles = {...styles.base, ...style};
     console.log(mergedStyles); 
 //<FontIcon className="material-icons" style={mergedStyles} >{bookmark}</FontIcon>
+// <IconButton iconClassName="material-icons" iconStyle={{color:'blue'}} tooltipPosition="bottom-center" tooltip="Sky">bookmark</IconButton>
     return (
-      <IconButton tooltip="Sort" disabled={false}>
-      <FontIcon color={'#cccccc'} style={mergedStyles} className="material-icons">{bookmark}</FontIcon>
-      </IconButton>
+
+<FontIcon className="material-icons" style={mergedStyles} >{bookmark}</FontIcon>
     );
   }
 }
+
+      // <IconButton tooltip="Sort" disabled={false}>
+      // <FontIcon color={'#cccccc'} style={mergedStyles} className="material-icons">{bookmark}</FontIcon>
+      // </IconButton>
 
 var styles = {
   base: {

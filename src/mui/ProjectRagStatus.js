@@ -25,7 +25,7 @@ class ProjectRagStatus extends Component {
         avatarSize = 32;
         break;
       case 'list':
-        avatarSize = 40;
+        avatarSize = 22;
         break;
       default:
         avatarSize = 28;

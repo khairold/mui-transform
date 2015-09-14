@@ -43,6 +43,10 @@ var styles = {
   large: {
     fontSize: 60,
     height: 66
+  },
+  card: {
+    fontSize: 22,
+    height: 28
   }
 }
 

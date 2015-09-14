@@ -10,10 +10,21 @@ class ProjectCardHeader extends Component {
     const { updaterName, updaterImage, lastUpdatedAgo } = this.props;
     return (
 			<CardText>
-				<PeopleAvatarName name={updaterName} image={updaterImage} sub={lastUpdatedAgo} />
+				<div style={styles.base} >
+					<PeopleAvatarName name={updaterName} image={updaterImage} sub={lastUpdatedAgo} />
+				</div>
 			</CardText>
     );
   }
+}
+
+let styles = {
+	base: {
+	    display: 'flex',
+	    flexDirection: 'row',
+	    justifyContent: 'center',
+	    alignItems: 'center',
+	}
 }
 
 export default ProjectCardHeader;

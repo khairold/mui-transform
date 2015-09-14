@@ -34,6 +34,10 @@ var styles = {
   },
   invert: {
     color: 'rgba(255, 255, 255, 0.65)'
+  },
+  card: {
+    fontSize: 14,
+    height: 16
   }
 }
 

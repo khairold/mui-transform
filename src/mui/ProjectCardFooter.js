@@ -11,13 +11,20 @@ class ProjectCardFooter extends Component {
     return (
 			<CardText>
 				<div style={styles.footerOut}>
-					<div style={styles.footerIn}>
-						<ProjectRagStatus rag={rag} style={{marginRight: 8}} />
-						<GreyedText size={'medium'} brightness={'darker'} >{toGo}</GreyedText>
-						<ProjectBookmark bookMarked={bookMark} style={{marginLeft: 8}} />
-					</div>
+
 					<div>
-						<GreyedText>{people}</GreyedText> 
+						<GreyedText size={'medium'} brightness={'darker'} >{toGo}</GreyedText>
+						<FontIcon className="material-icons" color={'#8f8f8f'} style={{fontSize: 16, margin: '0 4px'}} >info_outline</FontIcon>
+			            <FontIcon className="material-icons" color={'#8f8f8f'} style={{fontSize: 16, margin: '0 4px'}} >people_outline</FontIcon>
+			            <FontIcon className="material-icons" color={'#8f8f8f'} style={{fontSize: 16, margin: '0 4px'}} >history</FontIcon>          
+			            <FontIcon className="material-icons" color={'#8f8f8f'} style={{fontSize: 16, margin: '0 4px'}} >chat_bubble_outline</FontIcon>
+					</div>
+					<div style={styles.footerIn}>
+						
+						
+						<ProjectBookmark bookMarked={bookMark} style={{marginLeft: 8}} />
+						<div style={styles.seperator} />
+						<GreyedText size={'medium'} >{people}</GreyedText> 
 					</div>
 				</div>
 			</CardText>
@@ -41,7 +48,12 @@ var styles = {
 		display: 'flex',
 		flexDirection: 'row',
 		alignItems: 'center',
-	}
+	},
+	seperator: {
+    height: 30,
+    margin: '0 10px',
+    borderLeft: '1px solid #cccccc',
+  },
 }
 
 export default ProjectCardFooter;

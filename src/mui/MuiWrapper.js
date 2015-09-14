@@ -33,14 +33,16 @@ class MuiWrapper extends Component {
 				// <ProjectPeople />
 				// <ProjectList />
 				// {projectCardNodes}
+
 				
 		return (
 			<div style={{minHeight: 100}}>
 				<Style rules={{ html: {	position: 'relative', minHeight: '100%' }}} />
 				
 				<GwAppBar />
-				
-				<ProjectList />
+				{projectCardNodes}
+				<ProjectUpdate />
+
 			</div>
 		);
 	}
