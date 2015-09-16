@@ -41,7 +41,6 @@ class MuiWrapper extends Component {
 				
 				<GwAppBar />
 				{projectCardNodes}
-				<ProjectUpdate />
 
 			</div>
 		);
@@ -59,7 +58,7 @@ let projectCardsData = [
 		lastUpdatedAgo: '2 days ago',
 		projectTitle: 'Pangkor',
 		projectSubtitle: 'King of POP',
-		projectText: 'Yes, each react component has state. State is something internal to the component. Only the component itself can read and write into its own state and as the name implies, the state of the component is used to store state (captain obvious here). Not interesting. Let’s move next.',
+		projectText: 'Everything is on schedule. Right on track.',
 		projectRagStatus: 'green',
 		projectToGo: '3 days to go',
 		projectBookmark: true,

@@ -4,7 +4,7 @@ class GwAppBar extends Component {
   render() {  
     return (
 			<div style={styles.appbar}>
-        <span style={styles.appbarTitle} >GW Projects</span>
+        <span style={styles.appbarTitle} >Projects</span>
       </div>
     );
   }

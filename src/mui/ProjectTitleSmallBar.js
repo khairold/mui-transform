@@ -12,7 +12,7 @@ class ProjectTitleSmallBar extends Component {
 
     let titleBlock;
     if (!noTitle) {
-      titleBlock = <ProjectTitleSubTitle title={title} subtitle={subtitle} size={'card'} />;
+      titleBlock = <ProjectTitleSubTitle title={title} subtitle={subtitle} inline={false} size={'card'} />;
     };
 
     return (
@@ -39,8 +39,12 @@ var styles = {
     justifyContent: 'space-between',
     padding: '0px 0px',
     margin: '0px auto',
-    
   },
+  right: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex'
+  }
 }
 
 export default ProjectTitleSmallBar;

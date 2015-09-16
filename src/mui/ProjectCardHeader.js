@@ -22,8 +22,9 @@ let styles = {
 	base: {
 	    display: 'flex',
 	    flexDirection: 'row',
-	    justifyContent: 'center',
+	    justifyContent: 'flex-end',
 	    alignItems: 'center',
+	    paddingRight: 62
 	}
 }
 

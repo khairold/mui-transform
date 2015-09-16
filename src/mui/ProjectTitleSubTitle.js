@@ -3,16 +3,25 @@ import React, { Component, PropTypes } from 'react';
 import ProjectTitle from './ProjectTitle';
 import ProjectSubTitle from './ProjectSubTitle';
 
+import Radium from 'radium';
+
 class ProjectTitleSubTitle extends Component {
   render() {
-  	const { title, subtitle, size, invert } = this.props;
+  	const { title, subtitle, size, invert, inline } = this.props;
     return (
       <div>
-        <ProjectTitle size={size}>{title}</ProjectTitle>
-        <ProjectSubTitle size={size} >{subtitle}</ProjectSubTitle>
+        <ProjectTitle size={size} inline={inline} >{title}</ProjectTitle>
+        <ProjectSubTitle size={size} inline={inline} >{subtitle}</ProjectSubTitle>
       </div>
     );
   }
 }
 
-export default ProjectTitleSubTitle; 
+var styles = {
+  inline: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+	}
+}
+export default Radium(ProjectTitleSubTitle); 

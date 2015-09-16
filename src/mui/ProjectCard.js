@@ -23,7 +23,7 @@ class ProjectCard extends Component {
 
 
 					<CardText>
-						<ProjectTitleSmallBar title={'Hello'} subtitle={'This is the Call'} rag={'green'} ocm={'OCM #21'} dateUpdated={'Jan 21st, 2015'} />
+						<ProjectTitleSmallBar title={'Hello'} subtitle={'This is the Call'} rag={'green'} ocm={'MOM #21'} dateUpdated={'Jan 21st, 2015'} />
 					</CardText>
 
 					<ProjectCardText>

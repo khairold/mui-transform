@@ -3,9 +3,9 @@ import Radium from 'radium';
 
 class ProjectSubTitle extends Component {
   render() {
-  	const { children, size, invert } = this.props;
+  	const { children, size, invert, inline } = this.props;
     return (
-      <span style={[styles.base, styles[size], invert && styles.invert]} >{children}</span>
+      <span style={[styles.base, styles[size], invert && styles.invert, inline && styles.inline]} >{children}</span>
     );
   }
 }
@@ -38,6 +38,9 @@ var styles = {
   card: {
     fontSize: 14,
     height: 16
+  },
+  inline: {
+    display: 'inline-block'
   }
 }
 

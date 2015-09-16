@@ -4,7 +4,7 @@ import Radium from 'radium';
 
 class ProjectBookmark extends Component {
   render() {
-  	const { bookMarked, style } = this.props;
+  	const { bookMarked, style, color } = this.props;
     let bookmark;
     switch(bookMarked) {
       case true:
@@ -19,7 +19,7 @@ class ProjectBookmark extends Component {
 // <IconButton iconClassName="material-icons" iconStyle={{color:'blue'}} tooltipPosition="bottom-center" tooltip="Sky">bookmark</IconButton>
     return (
 
-<FontIcon className="material-icons" style={mergedStyles} >{bookmark}</FontIcon>
+<FontIcon color={color} className="material-icons" style={mergedStyles} >{bookmark}</FontIcon>
     );
   }
 }
