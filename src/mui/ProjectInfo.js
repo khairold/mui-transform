@@ -6,9 +6,9 @@ import ProjectUpdateText from './ProjectUpdateText';
 import ProjectUpdateFooterBar from './ProjectUpdateFooterBar';
 
 
-class ProjectMain extends Component {
+class ProjectInfo extends Component {
   render() {  
-    const { updaterName, updaterImage, lastUpdatedAgo, projectTopPeople, projectBookmark, projectUpdateQuote, projectUpdateText, projectTitle, projectSubtitle, projectUpdateOcm, projectUpdateDate, projectRagStatus } = dummyData;
+    const { updaterName, updaterImage, lastUpdatedAgo, projectTopPeople, projectBookmark, projectUpdateQuote, projectUpdateText, projectTitle, projectSubtitle, projectUpdateOcm, projectUpdateDate, projectRagStatus } = this.props;
     return (
       <div>
         <ProjectTitleSmallBar noTitle={true} title={projectTitle} subtitle={projectSubtitle} ocm={projectUpdateOcm} dateUpdated={projectUpdateDate} rag={projectRagStatus} container={styles.container} />
@@ -46,4 +46,4 @@ var styles = {
   }
 }
 
-export default ProjectMain;
+export default ProjectInfo;

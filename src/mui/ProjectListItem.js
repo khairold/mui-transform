@@ -23,7 +23,7 @@ class ProjectListItem extends Component {
                   {excerpt}
                 </GreyedText>
               } 
-              rightIconButton={ <IconButton iconClassName="material-icons" iconStyle={{color:'#acacac'}} tooltipPosition="bottom-center" tooltip={tip} >{bookmark}</IconButton>}
+              rightIconButton={ <IconButton iconClassName="material-icons" iconStyle={{color:'#acacac'}} tooltipPosition="bottom-left" tooltip={tip} >{bookmark}</IconButton>}
               secondaryTextLines={2}  disabled={false} />   
               {/*<ListDivider inset={true} />  */}
       </div>

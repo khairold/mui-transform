@@ -15,10 +15,12 @@ class ProjectListItemGroup extends Component {
     let listItemCountBorder = false;
     let itemBorder;
 
-    let projectListItemNodes = projectListItemsData.filter(function(projectListItemData){
-      return projectListItemData.status == status;
-    }).map(function(projectListItemData){
+    // let projectListItemNodes = projectListItemsData.filter(function(projectListItemData){
+    //   return projectListItemData.status == status;
+    // }).map(function(projectListItemData){
  
+    let projectListItemNodes = projectListItemsData.map(function(projectListItemData){
+
       if (listItemCountBorder) {
         itemBorder = <ListDivider inset={true} />;
       } else {
