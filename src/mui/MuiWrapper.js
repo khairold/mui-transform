@@ -9,6 +9,7 @@ import ProjectUpdate from './ProjectUpdate';
 import ProjectMain from './ProjectMain';
 import ProjectPeople from './ProjectPeople';
 import ProjectList from './ProjectList';
+import ProjectTab from './ProjectTab';
 
 const ThemeManager = new mui.Styles.ThemeManager();
 
@@ -36,12 +37,12 @@ class MuiWrapper extends Component {
 
 				
 		return (
-			<div style={{minHeight: 100}}>
-				<Style rules={{ html: {	position: 'relative', minHeight: '100%' }}} />
+			<div>
+				{<Style rules={{ html: {	position: 'relative', minHeight: '100%' }}} />}
 				
-				<GwAppBar />
-				{projectCardNodes}
-
+				<GwAppBar {...appBarData} />
+				<ProjectList />
+				
 			</div>
 		);
 	}
@@ -50,6 +51,13 @@ class MuiWrapper extends Component {
 MuiWrapper.childContextTypes = {
 	muiTheme: React.PropTypes.object 
 };
+
+let appBarData = {
+	title: 'GW Projects',
+	tab: true,
+	activeTab: 'list',
+	tabNames: ['list','bookmarks']
+}
 
 let projectCardsData = [
 	{

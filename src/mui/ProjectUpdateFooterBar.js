@@ -35,7 +35,7 @@ var styles = {
     flexDirection: 'row',
     alignItems: 'center', 
     justifyContent: 'space-between',
-    backgroundColor: '#ededed',
+    backgroundColor: '#fafafa',
     borderTop: '1px solid #dddddd',
     borderLeft: '1px solid #dddddd',
     borderRight: '1px solid #dddddd',

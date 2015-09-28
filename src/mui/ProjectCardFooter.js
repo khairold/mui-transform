@@ -40,14 +40,14 @@ class ProjectCardFooter extends Component {
 						<ProjectBookmark color={styles.iconColor} bookMarked={bookMark} style={{marginLeft: 8}} />
 					</div>
 
-			        <IconMenu iconButtonElement={i}>
+			        {/*<IconMenu iconButtonElement={i}>
 			        
   <MenuItem primaryText="Refresh" />
   <MenuItem primaryText="Send feedback" />
   <MenuItem primaryText="Settings" />
   <MenuItem primaryText="Help" />
   <MenuItem primaryText="Sign out" />
-  </IconMenu>
+  </IconMenu>*/}
 
 				</div>
 			</CardText>

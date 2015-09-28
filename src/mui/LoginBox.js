@@ -6,11 +6,11 @@ class LoginBox extends Component {
     return (
       <div style={styles.base} >
         <Paper style={styles.box} >
-  		    <div style={{textAlign: 'center', marginBottom: 8}} >
+  		    <div style={{textAlign: 'center', marginBottom: 28}} >
             <span style={styles.loginTitle} >GW Projects</span>
           </div>
           
-            <TextField style={styles.textField} floatingLabelStyle={styles.floatingText} floatingLabelText="TM Staff ID" underlineFocusStyle={{borderColor: '#999999'}} />
+            <TextField style={styles.textField} floatingLabelStyle={styles.floatingText} floatingLabelText="Staff ID" underlineFocusStyle={{borderColor: '#999999'}} />
             <TextField style={styles.textField} floatingLabelStyle={styles.floatingText} floatingLabelText="Password" underlineFocusStyle={{borderColor: '#999999'}} errorText={null} type="password" />
           
           <div style={styles.loginContainer} >
@@ -34,7 +34,7 @@ var styles = {
   box: {
     fontFamily: 'medium-content-sans-serif-font', 
     width: 300,
-    height: 305,
+    height: 325,
     paddingTop: 30,
     margin: '0 auto',
     textAlign: 'center',

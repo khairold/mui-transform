@@ -1,10 +1,15 @@
 import React, { Component, PropTypes } from 'react';
+import ProjectTab from './ProjectTab';
 
 class GwAppBar extends Component {
   render() {  
+    const { title, tab, activeTab, tabNames } = this.props;
+    let projectTab = tab ? <ProjectTab activeTab={activeTab} tabNames={tabNames} /> : null;
+
     return (
 			<div style={styles.appbar}>
-        <span style={styles.appbarTitle} >Projects</span>
+        <span style={styles.appbarTitle} >{title}</span>
+        {projectTab}
       </div>
     );
   }
@@ -14,12 +19,13 @@ var styles = {
   appbar: {
     fontFamily: 'medium-content-sans-serif-font', 
     width: '100%',
-    height: 65,
+    height: 45,
+    paddingTop: 20,
     borderBottom: '1px solid #f3f3f3',
     display: '-webkit-flex',
     display: 'flex',
-    '-webkit-align-items': 'center',
-    'align-items': 'center',
+    '-webkit-align-items': 'baseline',
+    'align-items': 'baseline',
     marginBottom: 20
   },
   appbarTitle: {
