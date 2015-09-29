@@ -1,6 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import mui, { AppBar, Paper } from 'material-ui';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 import Radium, { Style } from 'radium';
+
+injectTapEventPlugin();
 
 import LoginBox from './LoginBox';
 import GwAppBar from './GwAppBar';
@@ -11,12 +14,16 @@ import ProjectPeople from './ProjectPeople';
 import ProjectList from './ProjectList';
 import ProjectTab from './ProjectTab';
 
-const ThemeManager = new mui.Styles.ThemeManager();
+// const ThemeManager = new mui.Styles.ThemeManager();
+const ThemeManager = require('material-ui/lib/styles/theme-manager');
+const LightRawTheme = require('material-ui/lib/styles/raw-themes/light-raw-theme');
+const Colors = require('material-ui/lib/styles/colors');
 
 class MuiWrapper extends Component {
 	getChildContext() { 
 		return {
-			muiTheme: ThemeManager.getCurrentTheme()
+			// muiTheme: ThemeManager.getCurrentTheme()
+			muiTheme: ThemeManager.getMuiTheme(LightRawTheme),
 		};
 	}
 	render() {
@@ -29,6 +36,7 @@ class MuiWrapper extends Component {
 				// <ProjectBookmarkCards projectCardsData={projectCardsData} />
 				// <ProjectInfo {...projectInfoData} />
 				// <ProjectPeople {...projectPeopleData} />
+				// <ProjectUpdate {...projectUpdateData} />
 
 				
 		return (
@@ -177,7 +185,8 @@ let projectUpdateData = {
   projectBookmark: false,
   projectTopPeople: 'Ali / Larter',
   projectUpdateOcm: 'OCM #19',
-  projectUpdateDate: 'July 24th, 2015'
+  projectUpdateDate: 'July 24th, 2015',
+  projectToGo: '3 days to go',
 };
 
 export default Radium(MuiWrapper);

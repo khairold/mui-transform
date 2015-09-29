@@ -17,7 +17,7 @@ class ProjectCardFooter extends Component {
 				<div style={styles.footerOut}>
 
 					<div>
-							<FontIcon className="material-icons" color={styles.iconColor} style={styles.icons} >info_outline</FontIcon>
+					<FontIcon className="material-icons" color={styles.iconColor} style={styles.icons} >info_outline</FontIcon>
 			        <FontIcon className="material-icons" color={styles.iconColor} style={styles.icons}>people_outline</FontIcon>
 			        <FontIcon className="material-icons" color={styles.iconColor} style={styles.icons} >history</FontIcon>          
 			        <FontIcon className="material-icons" color={styles.iconColor} style={styles.icons} >chat_bubble_outline</FontIcon>

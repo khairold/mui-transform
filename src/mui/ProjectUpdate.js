@@ -5,16 +5,16 @@ import ProjectUpdateQuote from './ProjectUpdateQuote';
 import ProjectUpdateText from './ProjectUpdateText';
 import ProjectUpdateFooterBar from './ProjectUpdateFooterBar';
 
-
 class ProjectUpdate extends Component {
   render() {  
-    const { updaterName, updaterImage, lastUpdatedAgo, projectTopPeople, projectBookmark, projectUpdateQuote, projectUpdateText, projectTitle, projectSubtitle, projectUpdateOcm, projectUpdateDate, projectRagStatus } = this.props;
+    const { updaterName, updaterImage, lastUpdatedAgo, projectTopPeople, projectBookmark, projectUpdateQuote, projectUpdateText, projectTitle, projectSubtitle, projectUpdateOcm, projectUpdateDate, projectRagStatus, projectToGo } = this.props;
+
     return (
       <div>
         <ProjectTitleSmallBar title={projectTitle} subtitle={projectSubtitle} ocm={projectUpdateOcm} dateUpdated={projectUpdateDate} rag={projectRagStatus} container={styles.container} />
         <ProjectUpdateQuote container={styles.container} updaterName={updaterName} updaterImage={updaterImage} lastUpdatedAgo={lastUpdatedAgo} projectUpdateQuote={projectUpdateQuote} />
         <ProjectUpdateText container={styles.container} projectUpdateText={projectUpdateText} />
-        <ProjectUpdateFooterBar bookMarked={projectBookmark} topPeople={projectTopPeople} />
+        <ProjectUpdateFooterBar bookMarked={projectBookmark} topPeople={projectTopPeople} toGo={projectToGo} />
       </div>
     );
   }
