@@ -3,9 +3,9 @@ import Radium from 'radium';
 
 class GreyedText extends Component {
   render() {
-  	const { children, size, brightness, style, block, bold } = this.props;
+  	const { children, size, brightness, style, block, bold, italic } = this.props;
     return (
-      <span style={[style, block && styles.block, bold && styles.bold, styles.base, styles[size], styles[brightness]]} >{children}</span>
+      <span style={[style, block && styles.block, bold && styles.bold, styles.base, styles[size], styles[brightness], italic && styles.italic]} >{children}</span>
     );
   }
 }
@@ -42,6 +42,9 @@ var styles = {
   },
   bold: {
     fontWeight: 'bold'
+  },
+  italic: {
+    fontStyle: 'italic'
   }
 
 }

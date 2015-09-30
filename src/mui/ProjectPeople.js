@@ -25,7 +25,7 @@ class ProjectPeople extends Component {
 
     return (
       <div>
-        <ProjectTitleSmallBar title={projectTitle} subtitle={projectSubtitle} ocm={projectUpdateOcm} dateUpdated={projectUpdateDate} rag={projectRagStatus} container={styles.container} />
+        <ProjectTitleSmallBar tab={true} title={projectTitle} subtitle={projectSubtitle} ocm={projectUpdateOcm} dateUpdated={projectUpdateDate} rag={projectRagStatus} container={styles.container} />
         <ProjectBlackBar container={styles.container} projectUpdateQuote={"These people, they work 8 days a week ..."} />
         <div style={styles.container}>
           <div style={styles.cardsContainer} >

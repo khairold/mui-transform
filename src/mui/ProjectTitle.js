@@ -3,12 +3,12 @@ import Radium from 'radium';
 
 class ProjectTitle extends Component {
   render() {
-  	const { children, size, invert, inline } = this.props;
+  	const { children, size, invert, inline, italic } = this.props;
     return (
-      <div style={styles.base} >
-        <span style={[styles.title, styles[size], invert && styles.invert, inline && styles.inline]} >{children}</span>
+      // <div style={styles.base} >
+        <span style={[styles.title, styles[size], invert && styles.invert, inline && styles.inline, italic && styles.italic]} >{children}</span>
         
-      </div>
+      // </div>
     );
   }
 }
@@ -58,6 +58,9 @@ var styles = {
   inline: {
     display: 'inline-block',
     marginRight: 6
+  },
+  italic: {
+    fontStyle: 'italic'
   }
 }
 

@@ -32,7 +32,7 @@ class ProjectList extends Component {
 const styles = {
   container: {
     fontFamily: 'medium-content-sans-serif-font', 
-    maxWidth: 580,
+    maxWidth: 720,
     padding: '0 10px',
     margin: '0 auto',
     display: 'block'

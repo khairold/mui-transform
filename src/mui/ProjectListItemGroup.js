@@ -36,7 +36,7 @@ class ProjectListItemGroup extends Component {
     });
 
     return (
-      <List style={styles.list} subheader={status} >
+      <List subheader={status} >
         {projectListItemNodes}
       </List>
     );

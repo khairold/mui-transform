@@ -20,10 +20,23 @@ const LightRawTheme = require('material-ui/lib/styles/raw-themes/light-raw-theme
 const Colors = require('material-ui/lib/styles/colors');
 
 class MuiWrapper extends Component {
+	// constructor(props, context) {
+ //    super(props);
+ //    this.state = {muiTheme: context.muiTheme};
+ //    // console.log('MUI: ' + this.state.muiTheme)
+ //  }
+ //  componentWillMount () {
+ //      let newMuiTheme = this.state.muiTheme;
+ //      newMuiTheme.rawTheme.spacing.iconSize = 20;   
+ //      this.setState({muiTheme: newMuiTheme,}); 
+ //  }
 	getChildContext() { 
+		let muiTheme = ThemeManager.getMuiTheme(LightRawTheme);
+		muiTheme = ThemeManager.modifyRawThemeFontFamily(muiTheme,'medium-content-sans-serif-font');
 		return {
 			// muiTheme: ThemeManager.getCurrentTheme()
-			muiTheme: ThemeManager.getMuiTheme(LightRawTheme),
+			// muiTheme: ThemeManager.getMuiTheme(LightRawTheme),
+			muiTheme: muiTheme
 		};
 	}
 	render() {
@@ -44,7 +57,7 @@ class MuiWrapper extends Component {
 				{<Style rules={{ html: {	position: 'relative', minHeight: '100%' }}} />}
 				
 				<GwAppBar {...appBarData} />
-				<ProjectInfo {...projectInfoData} />
+				<ProjectPeople {...projectPeopleData} />
 				
 				
 			</div>
@@ -58,7 +71,7 @@ MuiWrapper.childContextTypes = {
 
 let appBarData = {
 	title: 'GW Projects',
-	tab: false,
+	shorten: true,
 	activeTab: 'bookmarks',
 	tabNames: ['list','bookmarks']
 }
@@ -71,7 +84,8 @@ let projectListData = {
 	    rag: 'amber',
 	    bookMarked: true,
 	    status: 'On Going',
-	    excerpt: "Hmm... Wish I could come, but I'm out of town this weekend. There's so much more to tell you but I just don't have the time.",
+	    excerpt: "Hmm... Wish I could come, but I'm out.",
+	    lastUpdatedAgo: '2 days ago',
 	  },
 	  {
 	    title: 'Pangkor',
@@ -79,6 +93,7 @@ let projectListData = {
 	    bookMarked: false,
 	    status: 'On Going',
 	    excerpt: "Wish I could come, but I'm out of town this weekend. There's so much more to tell you but I just don't have the time.",
+	    lastUpdatedAgo: '2 days ago',
 	  },
 	  {
 	    title: 'Pangkor',
@@ -86,6 +101,7 @@ let projectListData = {
 	    bookMarked: false,
 	    status: 'On Going',
 	    excerpt: "Wish I could come, but I'm out of town this weekend. There's so much more to tell you but I just don't have the time.",
+	    lastUpdatedAgo: '2 days ago',
 	  },
 	  {
 	    title: 'Pangkor',
@@ -93,6 +109,7 @@ let projectListData = {
 	    bookMarked: false,
 	    status: 'KIV',
 	    excerpt: "Wish I could come, but I'm out of town this weekend. There's so much more to tell you but I just don't have the time.",
+	    lastUpdatedAgo: '2 days ago',
 	  }
 	]
 }

@@ -3,19 +3,17 @@ import ProjectTab from './ProjectTab';
 
 class GwAppBar extends Component {
   render() {  
-    const { title, tab, activeTab, tabNames } = this.props;
-    let projectTab = tab ? <ProjectTab activeTab={activeTab} tabNames={tabNames} /> : null;
+    const { title, tab, activeTab, tabNames, shorten } = this.props;
+    let projectTab = !shorten ? <ProjectTab activeTab={activeTab} tabNames={tabNames} /> : null;
 
+    let longTitle = <span style={styles.appbarTitle} >GW Projects</span>;
+    // let shortTitle = <span style={styles.appbarTitle} ><span style={styles.blockP}>P</span></span>;
+    let shortTitle = <span style={styles.appbarTitle} >GW</span>;
+    let titleText = !shorten ? longTitle : shortTitle;
     return (
-      <div>
-      
-			<div style={styles.appbar}>
-        
-          
-        
-        <span style={styles.appbarTitle} >{title}</span>
+      <div style={styles.appbar}>
+        {titleText}
         {projectTab}
-      </div>
       </div>
     );
   }
@@ -41,6 +39,14 @@ var styles = {
     color: '#333333',
     paddingLeft: 14,
     marginRight: 30
+  },
+  blockP: {
+    width: 34,
+    backgroundColor: '#000000',
+    color: '#ffffff',
+    display: 'inline-block',
+    textAlign: 'center',
+    marginRight:2
   }
 }
 

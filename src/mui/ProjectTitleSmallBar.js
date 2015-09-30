@@ -14,7 +14,7 @@ class ProjectTitleSmallBar extends Component {
     console.log('tab is left');
   }
   render() {
-    const { tab, noTitle, title, subtitle, container, ocm, dateUpdated, rag, size, currentUpdate } = this.props;
+    const { noHistory, tab, noTitle, title, subtitle, container, ocm, dateUpdated, rag, size, currentUpdate } = this.props;
 
     let titleBlock;
     let tabMarginTop;
@@ -26,11 +26,14 @@ class ProjectTitleSmallBar extends Component {
       tabMarginTop = '10px ';
     }
 
+    
+
     let tabNames = ['info','people','discussions','latest'];
     let tabNode = tab ? <div style={{padding:'0px 0', margin: tabMarginTop + ' 0 40px 0' }}><ProjectTab activeTab={'info'} tabNames={tabNames} /></div> : null;
 
     let statusText = currentUpdate ? 'current status' : 'historical status';
-
+    let historyIcon = !noHistory ? <div><ProjectUpdateHistoryIcon size={'small'} /><GreyedText style={{fontStyle: 'normal', position: 'relative', left: -12, top: -12}} >{statusText}</GreyedText></div> : null;
+    
     return (
         <div style={container} >
           <div style={styles.base} >
@@ -44,8 +47,7 @@ class ProjectTitleSmallBar extends Component {
                 <ProjectRagBox ocm={ocm} dateUpdated={dateUpdated} rag={rag} />
               </div>
               <div>
-                <ProjectUpdateHistoryIcon size={'small'} />
-                <GreyedText style={{fontStyle: 'normal', position: 'relative', left: -12, top: -12}} >{statusText}</GreyedText>
+                {historyIcon}
               </div>
             </div>
           </div>

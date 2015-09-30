@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import Radium from 'radium';
 
-import { FontIcon, IconMenu, IconButton } from 'material-ui';
+import { FontIcon, IconMenu, IconButton } from 'material-ui'; 
 
 
 let Menu = require('material-ui/lib/menus/menu');
