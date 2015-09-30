@@ -49,6 +49,7 @@
     "radium": "^0.13.8",
     "react": "^0.13.0",
     "react-tap-event-plugin": "^0.1.7",
+    "react-waypoint": "^1.0.3",
     "slug": "^0.9.1"
   }
 }

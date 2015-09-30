@@ -7,9 +7,15 @@ class GwAppBar extends Component {
     let projectTab = tab ? <ProjectTab activeTab={activeTab} tabNames={tabNames} /> : null;
 
     return (
+      <div>
+      
 			<div style={styles.appbar}>
+        
+          
+        
         <span style={styles.appbarTitle} >{title}</span>
         {projectTab}
+      </div>
       </div>
     );
   }
@@ -33,7 +39,8 @@ var styles = {
     fontSize: 30,
     fontWeight: 'bold',
     color: '#333333',
-    paddingLeft: 14
+    paddingLeft: 14,
+    marginRight: 30
   }
 }
 

@@ -5,14 +5,21 @@ class ProjectTitle extends Component {
   render() {
   	const { children, size, invert, inline } = this.props;
     return (
-      <span style={[styles.base, styles[size], invert && styles.invert, inline && styles.inline]} >{children}</span>
+      <div style={styles.base} >
+        <span style={[styles.title, styles[size], invert && styles.invert, inline && styles.inline]} >{children}</span>
+        
+      </div>
     );
   }
 }
 
 var styles = {
   base: {
-    WebkitFontSmoothing: 'antialiased',
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  title: {
+    // WebkitFontSmoothing: 'antialiased',
     borderCollapse: 'separate',
     color: '#333333',
     display: 'block',

@@ -26,7 +26,7 @@ var styles = {
     lineHeight: '33px',
     wordWrap: 'break-word',
     textShadow: 'rgba(0,0,0,.01) 0 0 1px',
-    margin: '48px 0',
+    margin: '48px 0 148px 0',
   },
 }
 

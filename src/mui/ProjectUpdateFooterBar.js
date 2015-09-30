@@ -2,7 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import { FontIcon, IconMenu, MenuItem, IconButton } from 'material-ui';
 import ProjectBookmark from './ProjectBookmark';
 import GreyedText from './GreyedText';
-import ProjectHistoryIcon from './ProjectHistoryIcon';
+import ProjectUpdateHistoryIcon from './ProjectUpdateHistoryIcon';
+import ProjectBookmarkIcon from './ProjectBookmarkIcon';
 
 class ProjectFooterIcon extends Component {
   render() {
@@ -15,24 +16,59 @@ class ProjectFooterIcon extends Component {
   }
 }
 
+class ProjectInfoIcon extends Component {
+  render() {
+    const { activeProjectSubPage } = this.props;
+    let icon;
+    if (activeProjectSubPage == 'info') {
+      icon = <FontIcon className="material-icons" color={'#333333'} style={{color:'#333333', fontSize:36, margin:'0 10px 0 0'}} >info</FontIcon>;
+    } else {
+      icon = <IconButton iconStyle={{color:'#8f8f8f'}} iconClassName="material-icons" tooltipPosition="top-left" tooltip="info">info_outline</IconButton>;
+    }
+    return (
+      <span>
+        {icon}
+      </span>
+    );
+  }
+}
+
+class ProjectPeopleIcon extends Component {
+  render() {
+    const { activeProjectSubPage } = this.props;
+    let icon;
+    if (activeProjectSubPage == 'people') {
+      icon = <FontIcon className="material-icons" color={'#333333'} style={{color:'#333333', fontSize:36, margin:'0 10px 0 10px'}} >people</FontIcon>;
+    } else {
+      icon = <IconButton iconStyle={{color:'#8f8f8f'}} iconClassName="material-icons" tooltipPosition="top-left" tooltip="people">people_outline</IconButton>;
+    }
+    return (
+      <span>
+        {icon}
+      </span>
+    );
+  }
+}
+
 class ProjectUpdateFooterBar extends Component {
   render() {
-  	const { bookMarked, topPeople, toGo } = this.props;
+  	const { activeProjectSubPage, bookMarked, topPeople, toGo } = this.props;
 
     let bB = <IconButton iconClassName="material-icons" tooltipPosition="bottom-center" tooltip="Sky">settings_system_daydream</IconButton>;
 
     return (
       <div style={{position: 'fixed', zIndex: 1, bottom: 0, width: '100%'}}>
         <div style={styles.base}>
-          <div>
-            <IconButton iconStyle={{color:'#8f8f8f'}} iconClassName="material-icons" tooltipPosition="top-left" tooltip="info">info_outline</IconButton>
-            <IconButton iconStyle={{color:'#8f8f8f'}} iconClassName="material-icons" tooltipPosition="top-left" tooltip="people">people_outline</IconButton>
+          <div style={styles.leftIcons}>
+            <ProjectInfoIcon activeProjectSubPage={activeProjectSubPage} />
+            <ProjectPeopleIcon activeProjectSubPage={activeProjectSubPage} />
+
             <IconButton iconStyle={{color:'#8f8f8f'}} iconClassName="material-icons" tooltipPosition="top-left" tooltip="discussons">chat_bubble_outline</IconButton>
-            <ProjectHistoryIcon />
+            <ProjectUpdateHistoryIcon activeProjectSubPage={activeProjectSubPage} />
           </div>
           <div style={styles.right} >
             <GreyedText style={{fontStyle: 'italic', marginLeft: 20}} brightness={'darker'} size={'medium'} >{toGo}</GreyedText> 
-            <ProjectBookmark bookMarked={bookMarked} style={{margin: '0 8px'}} />
+            <ProjectBookmarkIcon bookMarked={bookMarked} style={{margin: '0 8px'}} />
           </div>
         </div>
       </div>
@@ -43,7 +79,7 @@ class ProjectUpdateFooterBar extends Component {
 var styles = {
   base: {
     height: 52,
-    maxWidth: 740,
+    maxWidth: 720,
     padding: '0 20px',
     display: 'flex',
     flexDirection: 'row',
@@ -71,6 +107,11 @@ var styles = {
     margin: '0 10px',
     borderLeft: '1px solid #cccccc',
   },
+  leftIcons: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+  }
 }
 
 export default ProjectUpdateFooterBar;

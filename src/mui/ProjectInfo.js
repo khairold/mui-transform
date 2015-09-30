@@ -1,20 +1,30 @@
 import React, { Component, PropTypes } from 'react';
+import { LinearProgress } from 'material-ui';
 
 import ProjectTitleSmallBar from './ProjectTitleSmallBar';
 import ProjectTitleBigBar from './ProjectTitleBigBar';
 import ProjectUpdateText from './ProjectUpdateText';
 import ProjectUpdateFooterBar from './ProjectUpdateFooterBar';
+import GreyedText from './GreyedText';
+
 
 
 class ProjectInfo extends Component {
   render() {  
-    const { updaterName, updaterImage, lastUpdatedAgo, projectTopPeople, projectBookmark, projectUpdateQuote, projectUpdateText, projectTitle, projectSubtitle, projectUpdateOcm, projectUpdateDate, projectRagStatus } = this.props;
+    const { currentUpdate, updaterName, updaterImage, lastUpdatedAgo, projectTopPeople, projectBookmark, projectUpdateQuote, projectUpdateText, projectTitle, projectSubtitle, projectUpdateOcm, projectUpdateDate, projectRagStatus, projectToGo } = this.props;
     return (
       <div>
-        <ProjectTitleSmallBar noTitle={true} title={projectTitle} subtitle={projectSubtitle} ocm={projectUpdateOcm} dateUpdated={projectUpdateDate} rag={projectRagStatus} container={styles.container} />
-        <ProjectTitleBigBar title={projectTitle} subtitle={projectSubtitle} ocm={projectUpdateOcm} dateUpdated={projectUpdateDate} rag={projectRagStatus} container={styles.container} />
+        <ProjectTitleSmallBar currentUpdate={currentUpdate} noTitle={true} tab={true} title={projectTitle} subtitle={projectSubtitle} ocm={projectUpdateOcm} dateUpdated={projectUpdateDate} rag={projectRagStatus} container={styles.container} />
+        <ProjectTitleBigBar title={projectTitle} subtitle={projectSubtitle} ocm={projectUpdateOcm} dateUpdated={projectUpdateDate} rag={projectRagStatus} container={styles.container} topPeople={projectTopPeople} />
+        <div style={{...styles.container, marginTop:20}} >
+          <div style={styles.dates}>
+            <GreyedText brightness={'darkest'} >Jan 21st, 2015</GreyedText>
+            <GreyedText brightness={'darkest'} >Sep 23rd, 2016</GreyedText>
+          </div>
+          <LinearProgress mode="determinate" value={60} />
+        </div>
         <ProjectUpdateText container={styles.container} projectUpdateText={projectUpdateText} />
-        <ProjectUpdateFooterBar bookMarked={projectBookmark} topPeople={projectTopPeople} />
+        <ProjectUpdateFooterBar bookMarked={projectBookmark} toGo={projectToGo} activeProjectSubPage={'info'} />
       </div>
     );
   }
@@ -36,14 +46,21 @@ let dummyData = {
   projectUpdateDate: 'July 24th, 2015'
 };
 
-var styles = {
+let styles = {
   container: {
     fontFamily: 'medium-content-sans-serif-font', 
     maxWidth: 720,
     padding: '0 10px',
     margin: '0 auto',
     display: 'block'
+  },
+  dates: {
+    margin: '42px 0 12px 0',
+    display: '-webkit-flex',
+    display: 'flex',
+    justifyContent: 'space-between',
   }
 }
 
 export default ProjectInfo;
+

@@ -14,7 +14,7 @@ var styles = {
   base: {
     fontFamily: 'medium-content-sans-serif-font', 
     fontSize: 12, 
-    WebkitFontSmoothing: 'antialiased',
+    // WebkitFontSmoothing: 'antialiased',
     color: 'rgba(0, 0, 0, 0.4)'
   },
   small: {
@@ -27,6 +27,9 @@ var styles = {
     fontFamily: 'medium-content-sans-serif-font', 
     fontSize: 14, 
     color: '#777777'
+  },
+  almostWhite: {
+    color: '#dddddd'
   },
   darker: {
     color: '#8f8f8f'

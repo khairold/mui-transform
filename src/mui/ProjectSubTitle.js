@@ -12,7 +12,7 @@ class ProjectSubTitle extends Component {
 
 var styles = {
   base: {
-    WebkitFontSmoothing: 'antialiased',
+    // WebkitFontSmoothing: 'antialiased',
     borderCollapse: 'separate',
     color: '#8f8f8f',
     display: 'block',

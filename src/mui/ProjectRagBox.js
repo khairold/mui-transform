@@ -39,7 +39,7 @@ var styles = {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center', 
-    padding: '16px 0px',
+    padding: '0px 0 0 0',
     margin: '0px auto',
   },
   dateHistory: {

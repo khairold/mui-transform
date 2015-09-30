@@ -60,6 +60,11 @@ var styles = {
 	base: {
 		paddingBottom: 0
 	},
+	leftIcons: {
+		display: 'flex',
+		flexDirection: 'row',
+		alignItems: 'center',
+	},
 	footerOut: {
 		display: 'flex',
 		flexDirection: 'row',

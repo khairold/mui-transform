@@ -44,7 +44,7 @@ class MuiWrapper extends Component {
 				{<Style rules={{ html: {	position: 'relative', minHeight: '100%' }}} />}
 				
 				<GwAppBar {...appBarData} />
-				<ProjectUpdate {...projectUpdateData} />
+				<ProjectInfo {...projectInfoData} />
 				
 				
 			</div>
@@ -58,7 +58,7 @@ MuiWrapper.childContextTypes = {
 
 let appBarData = {
 	title: 'GW Projects',
-	tab: true,
+	tab: false,
 	activeTab: 'bookmarks',
 	tabNames: ['list','bookmarks']
 }
@@ -137,7 +137,8 @@ let projectInfoData = {
   projectBookmark: false,
   projectTopPeople: 'Ali / Larter',
   projectUpdateOcm: 'OCM #19',
-  projectUpdateDate: 'July 24th, 2015'
+  projectUpdateDate: 'July 24th, 2015',
+  currentUpdate: true,
 };
 
 let projectPeopleData = {
@@ -182,11 +183,12 @@ let projectUpdateData = {
   projectUpdateText: 'Yes, each react component has state. State is something internal to the component. Only the component it self can read and write into its own state and as the name implies, the state of the component is used to store state (captain obvious here). Not interesting. Let’s move next.',
   projectRagStatus: 'green',
   projectToGo: '3 days to go',
-  projectBookmark: false,
+  projectBookmark: true,
   projectTopPeople: 'Ali / Larter',
   projectUpdateOcm: 'OCM #19',
   projectUpdateDate: 'July 24th, 2015',
   projectToGo: '3 days to go',
+  currentUpdate: true,
 };
 
 export default Radium(MuiWrapper);

@@ -18,7 +18,7 @@ ProjectTabItem = Radium(ProjectTabItem);
 class ProjectTab extends Component 
 {  
   render() {
-    const { tabNames, activeTab } = this.props;  
+    const { tabNames, activeTab, container } = this.props;  
     let tabItemNodes = tabNames.map(function(tabName){
       return (
         <ProjectTabItem tabName={tabName} activeTab={activeTab} />
@@ -26,12 +26,14 @@ class ProjectTab extends Component
     });
 
     return (
-      <div style={styles.base} >
-  			<nav style={styles.tab}>
-          <ul>
-            {tabItemNodes}
-          </ul>
-        </nav>
+      <div style={container} >
+        <div style={styles.base} >
+    			<nav style={styles.tab}>
+            <ul>
+              {tabItemNodes}
+            </ul>
+          </nav>
+        </div>
       </div>
     );
   }
@@ -39,11 +41,11 @@ class ProjectTab extends Component
 
 const styles = {
   base: {
-    marginLeft: 30,
+    // marginLeft: 30,
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center'
+    // justifyContent: 'center'
   },
   tab: {
     fontFamily: 'medium-content-sans-serif-font', 
