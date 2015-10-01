@@ -1,11 +1,12 @@
 import React, { Component, PropTypes } from 'react';
+import Radium from 'radium';
 
 class ProjectUpdateText extends Component {
   render() {
-    const { container, projectUpdateText } = this.props;
+    const { container, projectUpdateText, discussion } = this.props;
     return (
         <div style={container} >
-          <div style={styles.base} >
+          <div style={[styles.base, discussion && styles.discussion]} >
             {projectUpdateText}
           </div>
         </div>
@@ -28,6 +29,11 @@ var styles = {
     textShadow: 'rgba(0,0,0,.01) 0 0 1px',
     margin: '48px 0 148px 0',
   },
+  discussion: {
+    fontSize: 18,
+    margin: '18px 0',
+    
+  }
 }
 
-export default ProjectUpdateText;
+export default Radium(ProjectUpdateText);

@@ -5,7 +5,7 @@ import PeopleName from './PeopleName';
 import PeopleAvatarName from './PeopleAvatarName';
 
 
-class ProjectCardHeader extends Component {
+class ProjectCardUpdater extends Component {
   render() {
     const { updaterName, updaterImage, lastUpdatedAgo } = this.props;
     return (
@@ -28,4 +28,4 @@ let styles = {
 	}
 }
 
-export default ProjectCardHeader;
+export default ProjectCardUpdater;

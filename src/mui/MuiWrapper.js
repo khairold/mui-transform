@@ -13,6 +13,7 @@ import ProjectInfo from './ProjectInfo';
 import ProjectPeople from './ProjectPeople';
 import ProjectList from './ProjectList';
 import ProjectTab from './ProjectTab';
+import ProjectDiscussion from './ProjectDiscussion';
 
 // const ThemeManager = new mui.Styles.ThemeManager();
 const ThemeManager = require('material-ui/lib/styles/theme-manager');
@@ -50,6 +51,7 @@ class MuiWrapper extends Component {
 				// <ProjectInfo {...projectInfoData} />
 				// <ProjectPeople {...projectPeopleData} />
 				// <ProjectUpdate {...projectUpdateData} />
+				// <ProjectDiscussion />
 
 				
 		return (
@@ -57,7 +59,9 @@ class MuiWrapper extends Component {
 				{<Style rules={{ html: {	position: 'relative', minHeight: '100%' }}} />}
 				
 				<GwAppBar {...appBarData} />
-				<ProjectPeople {...projectPeopleData} />
+				<ProjectDiscussion {...projectDiscussionData} />
+				<ProjectDiscussion {...projectDiscussionData} />
+				
 				
 				
 			</div>
@@ -68,6 +72,13 @@ class MuiWrapper extends Component {
 MuiWrapper.childContextTypes = {
 	muiTheme: React.PropTypes.object 
 };
+
+let projectDiscussionData = {
+	name: 'Nina',
+	timeAgo: '3 minutes ago',
+	image: 'images/people/s61455.jpg',
+	discussionText: 'Thanks for putting the time into this great share Mike.'
+}
 
 let appBarData = {
 	title: 'GW Projects',

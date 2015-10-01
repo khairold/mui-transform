@@ -4,6 +4,7 @@ import ProjectTitleSmallBar from './ProjectTitleSmallBar';
 import ProjectUpdateQuote from './ProjectUpdateQuote';
 import ProjectUpdateText from './ProjectUpdateText';
 import ProjectUpdateFooterBar from './ProjectUpdateFooterBar';
+import ProjectFooter from './ProjectFooter';
 
 
 class ProjectUpdate extends Component {
@@ -15,7 +16,8 @@ class ProjectUpdate extends Component {
         <ProjectTitleSmallBar title={projectTitle} subtitle={projectSubtitle} ocm={projectUpdateOcm} dateUpdated={projectUpdateDate} rag={projectRagStatus} container={styles.container} />
         <ProjectUpdateQuote container={styles.container} updaterName={updaterName} updaterImage={updaterImage} lastUpdatedAgo={lastUpdatedAgo} projectUpdateQuote={projectUpdateQuote} />
         <ProjectUpdateText container={styles.container} projectUpdateText={projectUpdateText} />
-        <ProjectUpdateFooterBar bookMarked={projectBookmark} topPeople={projectTopPeople} toGo={projectToGo} />
+        {/*<ProjectUpdateFooterBar bookMarked={projectBookmark} topPeople={projectTopPeople} toGo={projectToGo} />*/}
+        <ProjectFooter bookMarked={projectBookmark} topPeople={projectTopPeople} toGo={projectToGo} stuckBottom={true} />
       </div>
     );
   }

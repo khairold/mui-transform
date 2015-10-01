@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import mui, { CardText, FontIcon, IconButton, IconMenu} from 'material-ui';
 
-let MenuItem = require('material-ui/lib/menus/menu-item');
+let MenuItem = require('material-ui/lib/menus/menu-item'); 
 
 import GreyedText from './GreyedText';
 import ProjectRagStatus from './ProjectRagStatus';

@@ -45,12 +45,13 @@ class ProjectChatIcon extends Component {
   }
 }
 
-class ProjectUpdateFooterBar extends Component {
+class ProjectFooter extends Component {
   render() {
-  	const { activeProjectSubPage, bookMarked, topPeople, toGo } = this.props;
+  	const { activeProjectSubPage, bookMarked, topPeople, toGo, stuckBottom, card } = this.props;
     return (
-      <div style={{position: 'fixed', zIndex: 1, bottom: 0, width: '100%'}}>
-        <div style={styles.base}>
+      <div style={[stuckBottom && styles.stuckBottomWrap]} >
+      <div style={[card && styles.cardSeperator]} />
+        <div style={[styles.base, stuckBottom && styles.stuckBottom, card && styles.card]} >
           <div style={styles.leftIcons}>
             <ProjectInfoIcon activeProjectSubPage={activeProjectSubPage} />
             <ProjectPeopleIcon activeProjectSubPage={activeProjectSubPage} />
@@ -69,8 +70,6 @@ class ProjectUpdateFooterBar extends Component {
 
 var styles = {
   base: {
-    height: 52,
-    maxWidth: 720,
     padding: '0 20px',
     display: 'flex',
     flexDirection: 'row',
@@ -80,9 +79,31 @@ var styles = {
     borderTop: '1px solid #dddddd',
     borderLeft: '1px solid #dddddd',
     borderRight: '1px solid #dddddd',
-    margin: '0 auto',
+    margin: '12px auto 0 auto',
     fontFamily: 'medium-content-sans-serif-font', 
     color: '#333333',
+  },
+  stuckBottom: {
+    height: 52,
+    maxWidth: 720,
+  },
+  stuckBottomWrap: {
+    position: 'fixed', 
+    zIndex: 1, 
+    bottom: 0, 
+    width: '100%'
+  },
+  card: {
+    padding: '0 8px',
+    backgroundColor: '#ffffff',
+    border: 'none',
+    color:'#acacac'
+    // opacity: 0.9,
+    // margin: '0 20px',
+  },
+  cardSeperator: {
+    borderTop: '1px solid #ededed',
+    margin: '28px 20px 8px 20px',
   },
   right: {
     display: 'flex',
@@ -102,4 +123,4 @@ var styles = {
   }
 }
 
-export default Radium(ProjectUpdateFooterBar);
+export default Radium(ProjectFooter);
