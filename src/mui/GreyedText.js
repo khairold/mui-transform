@@ -23,6 +23,9 @@ var styles = {
   medium: {
     fontSize: 14
   },
+  large: {
+    fontSize: 28
+  },
   list: {
     fontFamily: 'medium-content-sans-serif-font', 
     fontSize: 14, 

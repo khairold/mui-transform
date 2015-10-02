@@ -60,7 +60,7 @@ class MuiWrapper extends Component {
 				
 				<GwAppBar {...appBarData} />
 				<ProjectDiscussion {...projectDiscussionData} />
-				<ProjectDiscussion {...projectDiscussionData} />
+				
 				
 				
 				

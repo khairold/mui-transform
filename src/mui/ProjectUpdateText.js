@@ -16,7 +16,7 @@ class ProjectUpdateText extends Component {
 
 var styles = {
   base: {
-    WebkitFontSmoothing: 'antialiased',
+    // WebkitFontSmoothing: 'antialiased',
     borderCollapse: 'separate',
     color: '#333333',
     fontFamily: 'medium-content-serif-font, Georgia, Cambria, Times, serif',

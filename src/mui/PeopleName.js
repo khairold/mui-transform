@@ -16,7 +16,6 @@ var styles = {
 	  fontSize: 14,
 	  fontFamily: 'medium-content-sans-serif-font',
     display: 'block',
-    WebkitFontSmoothing: 'antialiased'
 	},
   medium: {
     fontSize: 16 

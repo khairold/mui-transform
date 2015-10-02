@@ -16,7 +16,6 @@ var styles = {
     fontSize: 12, 
     color: 'rgba(0, 0, 0, 0.4)',
     display: 'block',
-    WebkitFontSmoothing: 'antialiased'
   },
   medium: {
     fontSize: 13
