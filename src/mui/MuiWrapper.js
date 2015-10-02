@@ -59,7 +59,7 @@ class MuiWrapper extends Component {
 				{<Style rules={{ html: {	position: 'relative', minHeight: '100%' }}} />}
 				
 				<GwAppBar {...appBarData} />
-				<ProjectDiscussion {...projectDiscussionData} />
+				<ProjectDiscussion projectDiscussionData={projectDiscussionData} />
 				
 				
 				
@@ -74,10 +74,24 @@ MuiWrapper.childContextTypes = {
 };
 
 let projectDiscussionData = {
-	name: 'Nina',
-	timeAgo: '3 minutes ago',
-	image: 'images/people/s61455.jpg',
-	discussionText: 'Thanks for putting the time into this great share Mike.'
+	user: {
+		name: 'Kiki',
+		image: 'images/people/s61455.jpg',
+	},
+	projectResponseData: [
+	  {
+	    name: 'Nina',
+	    timeAgo: '3 minutes ago',
+	    image: 'images/people/s61455.jpg',
+	    discussionText: 'Thanks for putting the time into this great share Mike.'
+	  },
+	  {
+	    name: 'Gordon',
+	    timeAgo: '3 minutes ago',
+	    image: 'images/people/s61455.jpg',
+	    discussionText: 'Thanks for putting the time into this great share Mike.'
+	  }
+	]
 }
 
 let appBarData = {
