@@ -46,10 +46,14 @@
   },
   "dependencies": {
     "material-ui": "^0.12.1",
+    "normalizr": "^1.0.0",
     "radium": "^0.13.8",
     "react": "^0.13.0",
+    "react-json-viewer": "^1.0.5",
+    "react-object-inspector": "^0.1.5",
     "react-tap-event-plugin": "^0.1.7",
     "react-waypoint": "^1.0.3",
+    "reselect": "^2.0.0",
     "slug": "^0.9.1"
   }
 }

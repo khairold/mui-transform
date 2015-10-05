@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+// import React, {Component} from "react";
 import mui, { AppBar, Paper } from 'material-ui';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import Radium, { Style } from 'radium';
@@ -15,10 +16,16 @@ import ProjectList from './ProjectList';
 import ProjectTab from './ProjectTab';
 import ProjectDiscussion from './ProjectDiscussion';
 
+import JSONViewer from '../data';
+// import data from '../data';
+import serverData from '../data/serverData';
+
 // const ThemeManager = new mui.Styles.ThemeManager();
 const ThemeManager = require('material-ui/lib/styles/theme-manager');
 const LightRawTheme = require('material-ui/lib/styles/raw-themes/light-raw-theme');
 const Colors = require('material-ui/lib/styles/colors');
+
+// <ProjectBookmarkCards projectCardsData={projectCardsData} />
 
 class MuiWrapper extends Component {
 	// constructor(props, context) {
@@ -43,7 +50,7 @@ class MuiWrapper extends Component {
 	render() {
 
 
-				// <GwAppBar />
+				// <GwAppBar {...appBarData} />
 				// <LoginBox />
 				// <GwAppBar {...appBarData} />
 				// <ProjectList {...projectListData} />
@@ -52,14 +59,15 @@ class MuiWrapper extends Component {
 				// <ProjectPeople {...projectPeopleData} />
 				// <ProjectUpdate {...projectUpdateData} />
 				// <ProjectDiscussion />
-
 				
 		return (
 			<div>
 				{<Style rules={{ html: {	position: 'relative', minHeight: '100%' }}} />}
 				
+				
 				<GwAppBar {...appBarData} />
-				<ProjectDiscussion projectDiscussionData={projectDiscussionData} />
+				<ProjectDiscussion  projectDiscussionData={projectDiscussionData} />
+				<JSONViewer json={serverData}></JSONViewer>
 				
 				
 				
